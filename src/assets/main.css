@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@theme {
+  --color-primary: #002EFF;
+  --color-stratos: #00124D;
+
+  --font-display: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Light theme (default) */
+:root {
+  --bg: #FFFFFF;
+  --text: #00124D;
+  --text-muted: rgba(0, 18, 77, 0.5);
+  --accent: #002EFF;
+  --border: rgba(0, 18, 77, 0.12);
+  --card-bg: rgba(0, 18, 77, 0.08);
+  --dropdown-bg: #FFFFFF;
+}
+
+/* Dark theme */
+.dark {
+  --bg: #00124D;
+  --text: #FFFFFF;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --accent: #002EFF;
+  --border: rgba(255, 255, 255, 0.12);
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --dropdown-bg: #001F5C;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
